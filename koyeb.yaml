@@ -1,0 +1,8 @@
+services:
+  - name: my-static-site
+    image: nginx:latest # Or a similar web server image
+    ports:
+      - 80
+    mounts:
+      - source: ./
+        destination: /usr/share/nginx/html # Path where Nginx serves files
